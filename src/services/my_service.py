@@ -1,4 +1,4 @@
-# services/my_service.py
+# src/services/my_service.py
 """
 Services in a FastAPI project are where “business logic” lives.
 

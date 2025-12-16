@@ -17,7 +17,7 @@ Example:
 from fastapi import APIRouter, status
 import logging
 from src.schemas.my_schemas import CreateUserRequest, CreateUserResponse
-from services.my_service import UserService
+from src.services.my_service import UserService
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/users", tags=["users"])
