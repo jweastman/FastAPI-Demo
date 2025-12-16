@@ -1,5 +1,4 @@
-
-
+# src/core/config.py
 from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -26,6 +25,4 @@ class Settings(BaseSettings):
     # Put non-secret defaults in config.py
     # Put environment-specific stuff / secrets in .env (or real env vars in prod)
 
-@lru_cache
-def get_settings() -> Settings:
-    return Settings()
+settings = Settings()
