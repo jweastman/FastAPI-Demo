@@ -1,6 +1,11 @@
-def main():
-    print("Hello from fastapi-demo!")
+from fastapi import FastAPI
+from src.core.config import get_settings
+
+settings = get_settings()
+
+app = FastAPI(title=settings.app_name)
 
 
-if __name__ == "__main__":
-    main()
+@app.get("/health")
+def health():
+    return {"status": "ok", "env": settings.environment}
